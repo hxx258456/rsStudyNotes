@@ -1,2 +1,4 @@
 # rsStudyNotes
-rust 学习笔记
+根据锈书学习rust笔记记录
+
+
