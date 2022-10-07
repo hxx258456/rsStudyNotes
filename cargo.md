@@ -58,3 +58,19 @@ hammer = { version = "0.5.0"}
 color = { git = "https://github.com/bjz/color-rs" }
 geometry = { path = "crates/geometry" }
 ```
+
+**使用国内依赖**
+在 $HOME/.cargo/config.toml 添加以下内容：
+```toml
+[source.crates-io]
+replace-with = 'ustc'
+
+[source.ustc]
+registry = "git://mirrors.ustc.edu.cn/crates.io-index"
+```
+首先，创建一个新的镜像源 [source.ustc]，然后将默认的 crates-io 替换成新的镜像源: replace-with = 'ustc'。
+
+简单吧？只要这样配置后，以往需要去 crates.io 下载的包，会全部从科大的镜像地址下载，速度刷刷的.. 我的 300M 大刀( 宽带 )终于有了用武之地。
+
+**下载依赖卡住解决方案**
+强行停止正在构建的进程，例如杀掉 IDE 使用的 rust-analyzer 插件进程，然后删除 $HOME/.cargo/.package_cache 目录
