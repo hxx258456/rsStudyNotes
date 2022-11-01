@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"mod":[["kinds","定义颜色的类型"],["utils","实用工具，目前只实现了调色板"]]};
