@@ -25,6 +25,7 @@ pub mod kinds {
     }
 }
 
+
 pub mod utils {
     //! 实用工具，目前只实现了调色板
     use crate::kinds::*;
