@@ -4,7 +4,9 @@
 //! rust支持手动设置变量可变性mut
 
 fn main() {
-    // 字符串对象hello world绑定变量a
+    // rust为什么支持手动设置变量可变性，因为本身无需改变的变量声明为不可变在运行期会避免一些多余的 runtime 检查。
+
+    // 字符串对象hello world绑定变量_a
     let _a = "hello world";
 
     // rust变量默认不可变,使用mut声明变量可变
@@ -31,18 +33,10 @@ fn main() {
     Struct { e1, .. } = Struct { e1: 5 };
 
     assert_eq!([1, 2, 3, 4, 5], [a1, b1, c1, d1, e1]);
+    println!("a1 = {:?}, b1 = {:?}, c1 = {:?}, d1 = {:?}",a1,b1,c1,d1);
 
     // 常量
     const MAX_POINTS: u32 = 100_0000;
-
-    // 变量遮蔽shadowing;
-    // rust允许声明相同变量名，在后面声明的变量会遮蔽掉前面声明的
-    let mut spaces = "   ";
-    spaces = spaces.len();
-    // 字符串类型
-    let spaces = "   ";
-    // usize数值类型
-    let spaces = spaces.len();
 }
 
 struct Struct {
