@@ -2,6 +2,7 @@
 //!
 //! 基础类型示例
 //! 数值类型：有符号整数(i8, i16, i32, i64, isize)、无符号整数(u8, u16, u32, u64, usize)、浮点数(f32, f64)、以及有理数、复数
+use num::complex::Complex;
 
 fn main() {
     // rust编译器可以自动进行简单的类型推导
@@ -52,6 +53,63 @@ fn main() {
         println!("未定义的数学行为!");
     }
 
+    // 数字运算
+    // 加法
+    let sum = 5 + 10;
+    // 减法
+    let difference = 95.5 - 43.3;
+    // 乘法
+    let product = 4 * 30;
+    // 除法
+    let quotient = 56.7 / 32.2;
+    // 取余
+    let remainder = 53 % 5;
+    println!("sum: {:?}", sum);
+    println!("difference: {:?}", difference);
+    println!("product: {:?}", product);
+    println!("quotient: {:?}", quotient);
+    println!("remainder: {:?}", remainder);
 
-    
+    // 通过类型后缀的方式进行类型标注
+    let twenty_two = 22_i32;
+    println!("twenty_two: {:?}", twenty_two);
+
+    let one_million = 1_00_0000_i64;
+    println!("one_million: {:?}", one_million.pow(2));
+
+    // 定义一个f32数组，其中42.0会自动被推导为f32类型
+    let forty_twos = [42.0, 42_f32, 42.0_f32];
+
+    println!("{:.2}", forty_twos[1]);
+
+    // 位运算
+    let mut a = 2_i32; // 0b10
+    let b = 3_i32; // 0b11
+
+    println!("(a & b) value is {:?}", a & b);
+    println!("(a | b) value is {:?}", a | b);
+    println!("(a ^ b) value is {:?}", a ^ b);
+    println!("(!b) value is {:#02b}", !b);
+    println!("(a >> b) value is {:?}", a >> b);
+    println!("(a << b) value is {:?}", a << b);
+    a &= b;
+    a <<= b;
+    a |= b;
+    a ^= b;
+    println!("{:?}", a);
+
+    // range序列化
+    for i in 1..=5 {
+        println!("i: {}", i);
+    }
+
+    for i in 'a'..='z' {
+        println!("i: {}", i);
+    }
+
+    let a_complex = Complex { re: 2.1, im: -1.2 };
+    let b_complex = Complex::new(11.1, 22.2);
+    let result = a_complex + b_complex;
+
+    println!("result: {:?}", result);
 }
