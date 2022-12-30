@@ -1,3 +1,0 @@
-(function() {var implementors = {
-"note_demo":[["impl Freeze for <a class=\"enum\" href=\"note_demo/kinds/enum.PrimaryColor.html\" title=\"enum note_demo::kinds::PrimaryColor\">PrimaryColor</a>",1,["note_demo::kinds::PrimaryColor"]],["impl Freeze for <a class=\"enum\" href=\"note_demo/kinds/enum.SecondaryColor.html\" title=\"enum note_demo::kinds::SecondaryColor\">SecondaryColor</a>",1,["note_demo::kinds::SecondaryColor"]]]
-};if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

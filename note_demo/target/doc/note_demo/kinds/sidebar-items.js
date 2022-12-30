@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"enum":[["PrimaryColor","主色"],["SecondaryColor","副色"]]};
